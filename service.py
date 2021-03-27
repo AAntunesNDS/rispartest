@@ -53,11 +53,8 @@ class ServiceBank:
     def run_service(self):
         self.create_contas()
         self.create_transacoes()
-        #print(f'Before execution all transactons...\n{self.__repr__()}\n\n')
         self.execute_all_transacoes()
-        #print(f'After execution all transactons...\n{self.__repr__()}\n\n')
         self.save_update_contas()
-        #print(f'{self.__str__()}')
 
     def __repr__(self):
         return f'Contas({[conta for conta in self.contas]}), \n\nTransacoes({[transacao for transacao in self.transacoes]})'
